@@ -121,7 +121,7 @@ in the following way:
   with the word "test".
 2. Make test functions to test some bit of your code:
   ```
-  def test\_simple():
+  def test_simple():
       assert 1+4 == 2+3
   ```
   * Each test function should test one thing
@@ -132,15 +132,15 @@ in the following way:
 If you only want to run a subset of tests, you can label them like so:
 ```
 @pytest.mark.mathtest
-def test\_addition():
+def test_addition():
     assert 1+4 == 2+3
 
 @pytest.mark.mathtest
-def test\_subtraction():
+def test_subtraction():
     assert 5-4 == 3-2
 
 @pytest.mark.strtest
-def test\_string():
+def test_string():
     assert "abc" != "jkl"
 ```
 Then, when you run, just use `pytest -m [labelname]` to run only tests which 
@@ -150,8 +150,8 @@ can be stored in your test directory and should look something like
 ```
 [pytest]
 markers =
-    methodtest: test the SF-IP/EA methods for correct energy values
-    blochtest: test the Bloch effective Hamiltonian build
+    mathtest: tests related to math
+    strtest: tests related to strings
 ```
 
 ## Travis CI
